@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+<script src = "VisitorManager.js"></script>
+<body ng-app="myApp" ng-controller="userCtrl">
+
+<div class="container">
+
+<h3>Visitor Management</h3>
+
+
+<div class="container" id="visitorTracking">
+
+<form class="form-horizontal">
+<div class="form-group">
+  <hr>
+  <label class="col-sm-2 control-label">Visitor Tracking Code</label>
+  <div class="col-sm-2">
+    <input type="text" ng-model="visitorTrackingCode" placeholder="Visitor Tracking Code">
+  </div>
+  <div class="col-sm-2">
+  <button class="btn btn-success" ng-click="loadVisitorDetails(visitorTrackingCode)">
+    <span class="glyphicon glyphicon-save"></span> Load Visitor Details!
+  </button>
+    </div>
+  <hr>
+</div>
+</form>
+
+
+</div>
+
+
+<table class="table table-striped">
+  <thead><tr>
+    <th>Information Type</th>
+    <th>Information Value</th>
+  </tr></thead>
+  <tbody>
+  <tr>
+    <td>Visitor Name</td>
+    <td>{{visitorDetails.visitorName}}</td>
+  </tr>
+  <tr>
+    <td>Visitor Email</td>
+    <td>{{visitorDetails.visitorEmail}}</td>
+  </tr>
+  <tr>
+    <td>Visitor Mobile Number</td>
+    <td>{{visitorDetails.visitorMobileNo}}</td>
+  </tr>
+  <tr>
+    <td>Visitor Address</td>
+    <td>{{visitorDetails.visitorAddress}}</td>
+  </tr>
+  <tr>
+    <td>Visitor Id Number</td>
+    <td>{{visitorDetails.visitorIdNo}}</td>
+  </tr>
+  <tr>
+    <td>Visitor Id Type</td>
+    <td>{{visitorDetails.visitorIdType}}</td>
+  </tr>
+  <tr>
+    <td>Meeting Purpose</td>
+    <td>{{visitorDetails.meetingPurpose}}</td>
+  </tr>
+  <tr>
+    <td>Meeting Location</td>
+    <td>{{visitorDetails.meetingLocation}}</td>
+  </tr>
+  <tr>
+    <td>Meeting Start Time</td>
+    <td>{{visitorDetails.meetingStartTime}}</td>
+  </tr>
+  <tr>
+    <td>Meeting End Time</td>
+    <td>{{visitorDetails.meetingEndTime}}</td>
+  </tr>
+  <tr>
+    <td>Meeting Organizer</td>
+    <td>{{visitorDetails.meetingOrganizer}}</td>
+  </tr>
+  <tr>
+    <td>Meeting Organizer Phone Number</td>
+    <td>{{visitorDetails.meetingOrganizerPhoneNumber}}</td>
+  </tr>
+  
+  </tbody>
+</table>
+
+</div>
+
+
+</body>
+</html>

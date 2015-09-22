@@ -10,8 +10,8 @@
         var service = {};
 
         service.Login = Login;
-        //service.SetCredentials = SetCredentials;
-        //service.ClearCredentials = ClearCredentials;
+        service.SetCredentials = SetCredentials;
+        service.ClearCredentials = ClearCredentials;
 
         return service;
 
@@ -33,6 +33,7 @@
             */
             /* Use this for real authentication
              ----------------------------------------------*/
+             alert(username+'-'+password+'-'+callback);
             $http.post('http://localhost:8080/authenticate', { username: username, password: password })
                 .success(function (response) {
                     callback(response);

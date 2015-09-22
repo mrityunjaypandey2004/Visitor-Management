@@ -20,7 +20,7 @@
         return service;
 
         function GetAll() {
-            return $http.get('/api/users').then(handleSuccess, handleError('Error getting all users'));
+            return $http.get('/getAllUsers').then(handleSuccess, handleError('Error getting all users'));
         }
 
         function GetById(id) {
@@ -28,11 +28,11 @@
         }
 
         function GetByUsername(username) {
-            return $http.get('/api/users/' + username).then(handleSuccess, handleError('Error getting user by username'));
+            return $http.get('/getUser/' + username).then(handleSuccess, handleError('Error getting user by username'));
         }
 
         function Create(user) {
-            return $http.post('http://localhost:8080/createUser', user).then(handleSuccess, handleError('Error registering user'));
+            return $http.post('/createUser', user).then(handleSuccess, handleError('Error registering user'));
         }
 
         function Update(user) {
@@ -40,7 +40,7 @@
         }
 
         function Delete(id) {
-            return $http.delete('/api/users/' + id).then(handleSuccess, handleError('Error deleting user'));
+            return $http.delete('/deleteUser/' + id).then(handleSuccess, handleError('Error deleting user'));
         }
 
         // private functions
